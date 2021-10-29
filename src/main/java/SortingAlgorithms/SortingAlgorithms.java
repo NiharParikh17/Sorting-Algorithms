@@ -28,9 +28,6 @@ public class SortingAlgorithms {
     public static void countingSort(int[] array) {
         int[] sortedArray = new int[array.length];
         int[] count = new int[getMax(array)+1];
-        // Setting the initial counts to 0
-        for (int i=0; i<count.length; i++)
-            count[i] = 0;
         // Updating counters for each value
         for (int i=0; i<array.length; i++)
             count[array[i]]++;
