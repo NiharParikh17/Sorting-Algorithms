@@ -19,4 +19,10 @@ public class SortingAlgorithmsTest {
         SortingAlgorithms.insertionSort(actualArray);
         assertArrayEquals(expectedArray, actualArray);
     }
+
+    @Test
+    public void countingSortTest() {
+        SortingAlgorithms.countingSort(actualArray);
+        assertArrayEquals(expectedArray, actualArray);
+    }
 }
