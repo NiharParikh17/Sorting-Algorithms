@@ -29,15 +29,14 @@ public class SortingAlgorithms {
         int[] sortedArray = new int[array.length];
         int[] count = new int[getMax(array)+1];
         // Updating counters for each value
-        for (int i=0; i<array.length; i++)
-            count[array[i]]++;
+        for (int j : array) count[j]++;
         // Updating the counts with array positions
         for (int i=1; i<count.length; i++)
             count[i] += count[i-1];
         // Building the sorted array
-        for (int i=0; i< array.length; i++) {
-            sortedArray[count[array[i]]-1] = array[i];
-            count[array[i]]--;
+        for (int j : array) {
+            sortedArray[count[j] - 1] = j;
+            count[j]--;
         }
         // Copying the sorted array to initial array
         for (int i=0; i<array.length; i++)
