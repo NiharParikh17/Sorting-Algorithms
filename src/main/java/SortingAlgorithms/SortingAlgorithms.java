@@ -39,8 +39,7 @@ public class SortingAlgorithms {
             count[j]--;
         }
         // Copying the sorted array to initial array
-        for (int i=0; i<array.length; i++)
-            array[i] = sortedArray[i];
+        System.arraycopy(sortedArray, 0, array, 0, array.length);
     }
 
     /* ******************************
