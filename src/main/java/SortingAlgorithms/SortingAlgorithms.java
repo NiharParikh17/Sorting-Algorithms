@@ -27,7 +27,7 @@ public class SortingAlgorithms {
      */
     public static void countingSort(int[] array) {
         int[] sortedArray = new int[array.length];
-        int[] count = new int[getMax(array)];
+        int[] count = new int[getMax(array)+1];
         // Setting the initial counts to 0
         for (int i=0; i<count.length; i++)
             count[i] = 0;
@@ -39,7 +39,7 @@ public class SortingAlgorithms {
             count[i] += count[i-1];
         // Building the sorted array
         for (int i=0; i< array.length; i++) {
-            sortedArray[count[array[i]]] = array[i];
+            sortedArray[count[array[i]]-1] = array[i];
             count[array[i]]--;
         }
         // Copying the sorted array to initial array
