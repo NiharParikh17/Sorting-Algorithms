@@ -8,6 +8,11 @@ pipeline {
                 sh './gradlew clean'
             }
         }
+        stage('SonarQube analysis') {
+            steps {
+                sh './gradlew sonarqube'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
